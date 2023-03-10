@@ -2,11 +2,11 @@
 
 ## To install, simply run:
 ```
-rcfile=$(ls ~/.*shrc | tail -n1 | sed 's/.*\///g')
+rcfile=~/.zshrc
 mkdir -p ~/.config
 git clone git@github.com:leonkuhne/scripts.git ~/.config/scripts
-echo -e "\n# github.com:leonkuhne/scripts\nfor f in ~/.config/scripts/*.sh; do source \$f; done" >> ~/$rcfile
-source ~/$rcfile
+echo -e "\n# github.com:leonkuhne/scripts\nfor f in ~/.config/scripts/*.sh; do source \$f; done" >> $rcfile
+source $rcfile
 ```
 
 ## Optional: To use `cd` instead of `c`, additionally run:
