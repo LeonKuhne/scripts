@@ -6,7 +6,7 @@ rcfile=~/.zshrc
 mkdir -p ~/.config
 git clone git@github.com:leonkuhne/scripts.git ~/.config/scripts
 echo -e "\n# github.com:leonkuhne/scripts\nfor f in ~/.config/scripts/*.sh; do source \$f; done" >> $rcfile
-zsh $rcfile
+source $rcfile
 ```
 
 ## Optional: To use `cd` instead of `c`, additionally run:
