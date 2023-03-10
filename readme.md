@@ -5,7 +5,7 @@
 rcfile=$(ls ~/.*shrc | tail -n1 | sed 's/.*\///g')
 mkdir -p ~/.config
 git clone git@github.com:leonkuhne/scripts.git ~/.config/scripts
-echo "\n# github.com:leonkuhne/scripts\nfor f in ~/.config/scripts/*.sh; do source \$f; done" >> ~/$rcfile
+echo -e "\n# github.com:leonkuhne/scripts\nfor f in ~/.config/scripts/*.sh; do source \$f; done" >> ~/$rcfile
 source ~/$rcfile
 ```
 
