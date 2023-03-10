@@ -2,7 +2,7 @@
 
 ## To install, simply run:
 ```
-rcfile=$(ls ~/.*shrc | sed 's/.*\///g')
+rcfile=$(ls ~/.*shrc | head -n1 | sed 's/.*\///g')
 mkdir -p ~/.config
 git clone git@github.com:leonkuhne/scripts.git ~/.config/scripts
 echo "\n# github.com:leonkuhne/scripts\nfor f in ~/.config/scripts/*.sh; do source \$f; done" >> ~/$rcfile
