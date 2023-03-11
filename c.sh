@@ -5,9 +5,6 @@ if [ -z $LWD_DIR ]; then
 fi
 if [ -z $C_DIR ]; then C_DIR=.cd; fi
 
-# clear change
-alias cc=$(clear && c $@)
-
 # change [directory]
 function c() {
   if [ -z "$@" ]; then
@@ -22,3 +19,7 @@ function c() {
     fi
   fi
 }
+
+# clear change
+alias cc=$(clear && c $@)
+
