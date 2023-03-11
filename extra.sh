@@ -47,15 +47,8 @@ function theme() {
 
 # git project
 function get() {
-  git clone git@github.com:lxk1170/$1.git
-  nav $1
-}
-
-# git quickly
-function backup() {
-  git add .
-  git commit -m "$@"
-  git push
+  git clone git@github.com:leonkuhne/$1.git
+  c $1
 }
 
 function browse() {
@@ -72,11 +65,6 @@ function goo() {
   url=$(echo "$@" | jq -sRr @uri)
   url="https://www.google.com/search?q=$url"
   browse $url
-}
-
-# start at last working directory
-function back() {
-  c $(cat $LWD_DIR)
 }
 
 # navigate with ranger
