@@ -21,5 +21,4 @@ function c() {
 }
 
 # clear change
-alias cc=$(clear && c $@)
-
+alias cc="clear && c"
