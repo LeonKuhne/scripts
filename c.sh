@@ -13,9 +13,9 @@ function c() {
     cd $@
     pwd
     pwd > $LWD_DIR # store last working directory
-    rand_prompt # indicate change with color
+    #rand_prompt # indicate change with color
     if [ -f "$(pwd)/$C_DIR" ]; then # execute directory script
-      source ./"$C_DIR"
+      source "./$C_DIR"
     fi
   fi
 }
