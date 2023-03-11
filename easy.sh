@@ -1,5 +1,5 @@
-#!/bin/sh
-# simplify shell scripting syntax
+#!/bin/bash
+# simplified shell scripting syntax
 
 #usage: notnull <nullable> <command>
 function notnull() {

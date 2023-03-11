@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # default config
 if [ -z $LWD_DIR ]; then 
   LWD_DIR=$HOME/.lwd
