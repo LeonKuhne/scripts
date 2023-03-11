@@ -30,18 +30,22 @@ export C_CRIT=$(color 1 0 6)
 export C_ALERT=$(color 1 0 5)
 export C_EMERG=$(color 1 7 1)
 
-# handy helper functions 
-function c_log() { echo -n "$1" && echo ${@:2} && echo -n "$C_RESET"; }
-function title() { c_log "$C_TITLE" $@ }
+# handy helper
+function c_log() { 
+  echo -n "$1"
+  echo ${@:2}
+  echo -n "$C_RESET";
+}
 # same as kernal log levels
-function debug() { c_log "$C_DEBUG" $@ }
-function info() { c_log "$C_INFO" $@ }
-function notice() { c_log "$C_NOTICE" $@ }
-function warn() { c_log "$C_WARN" $@ }
-function err() { c_log "$C_ERR" $@ }
-function crit() { c_log "$C_CRIT" $@ }
-function alert() { c_log "$C_ALERT" $@ }
-function emerg() { c_log "$C_EMERG" $@ }
+function title() { c_log "$C_TITLE" $@; }
+function debug() { c_log "$C_DEBUG" $@; }
+function info() { c_log "$C_INFO" $@; }
+function notice() { c_log "$C_NOTICE" $@; }
+function warn() { c_log "$C_WARN" $@; }
+function err() { c_log "$C_ERR" $@; }
+function crit() { c_log "$C_CRIT" $@; }
+function alert() { c_log "$C_ALERT" $@; }
+function emerg() { c_log "$C_EMERG" $@; }
 
 # list all available color constants
 function COLORS() {
@@ -90,3 +94,4 @@ function colors() {
     done;
   done;
 }
+
