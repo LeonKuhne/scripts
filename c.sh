@@ -1,3 +1,12 @@
+# default config
+if [ -z $LWD_DIR ]; then 
+  LWD_DIR=$HOME/.lwd
+  touch $LWD_DIR
+fi
+if [ -z $C_DIR ]; then C_DIR=.cd; fi
+
+# clear change
+alias cc=$(clear && c $@)
 
 # change [directory]
 function c() {
