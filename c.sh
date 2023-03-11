@@ -24,3 +24,5 @@ function c() {
 
 # clear change
 alias cc="clear && c"
+# clear list
+alias cl="clear && ls"
