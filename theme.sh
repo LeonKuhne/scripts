@@ -1,5 +1,5 @@
 #!/bin/bash
-self="$0"
+this_file="$0"
 
 # construct a color
 function color() {
@@ -19,10 +19,10 @@ export B_SMALL=◦
 
 # custom shell agnostic color aliases
 export C_RESET=$(color 0 0)
-export C_TITLE=$(color 1 0 2)
+export C_HEADER=$(color 1 0 2)
 # copied from linux kernal log levels
 export C_DEBUG=$(color 1 4 0)
-export C_INFO=$(color 1 2 0)
+export C_INFOS=$(color 1 2 0)
 export C_NOTICE=$(color 1 0 7)
 export C_WARN=$(color 1 6 0)
 export C_ERR=$(color 1 1 0)
@@ -37,9 +37,9 @@ function c_log() {
   echo -n "$C_RESET";
 }
 # same as kernal log levels
-function title() { c_log "$C_TITLE" $@; }
+function header() { c_log "$C_TITLE" $@; }
 function debug() { c_log "$C_DEBUG" $@; }
-function info() { c_log "$C_INFO" $@; }
+function infos() { c_log "$C_INFO" $@; }
 function notice() { c_log "$C_NOTICE" $@; }
 function warn() { c_log "$C_WARN" $@; }
 function err() { c_log "$C_ERR" $@; }
@@ -49,7 +49,7 @@ function emerg() { c_log "$C_EMERG" $@; }
 
 # list all available color constants
 function COLORS() {
-  grep "^export C_" $self |
+  grep "^export C_" $this_file |
     sed "s/^export\ //g" |
     sed "s/=.*$//g" |
     xargs python3 -c '
@@ -67,7 +67,7 @@ print(", ".join(text))'
 
 # list all available bullet constants
 function BULLETS() {
-  grep "^export B_" $self |
+  grep "^export B_" $this_file |
     sed "s/^export\ //g" |
     sed "s/=.*$//g" |
     xargs python3 -c '
