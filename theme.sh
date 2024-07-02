@@ -37,9 +37,9 @@ function c_log() {
   echo -n "$C_RESET";
 }
 # same as kernal log levels
-function header() { c_log "$C_TITLE" $@; }
+function header() { c_log "$C_HEADER" $@; }
 function debug() { c_log "$C_DEBUG" $@; }
-function infos() { c_log "$C_INFO" $@; }
+function infos() { c_log "$C_INFOS" $@; }
 function notice() { c_log "$C_NOTICE" $@; }
 function warn() { c_log "$C_WARN" $@; }
 function err() { c_log "$C_ERR" $@; }
