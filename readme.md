@@ -1,8 +1,8 @@
 # Welcome
 
 ## To install, simply run:
-```
-rcfile=~/.zshrc
+```bash
+rcfile=$HOME/$(ls ~/.*shrc | sed 's/.*\///g')
 mkdir -p ~/.config
 git clone git@github.com:LeonKuhne/scripts.git ~/.config/scripts
 echo -e "\n# github.com:leonkuhne/scripts\nfor f in ~/.config/scripts/*.sh; do source \$f; done" >> $rcfile
@@ -10,7 +10,7 @@ source $rcfile
 ```
 
 ## Optional: To use `cd` instead of `c`, additionally run:
-```
+```bash
 rcfile=$(ls ~/.*shrc | sed 's/.*\///g')
 echo "alias cd=c" >> ~/$rcfile
 source ~/$rcfile
