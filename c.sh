@@ -26,7 +26,6 @@ function c() {
 function back() {
   c $(cat $LWD_DIR)
 }
-back
 
 # clear change
 alias cc="clear && c"
