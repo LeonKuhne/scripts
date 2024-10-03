@@ -11,7 +11,6 @@ source $rcfile
 
 ## Optional: To use `cd` instead of `c`, additionally run:
 ```bash
-rcfile=$(ls ~/.*shrc | sed 's/.*\///g')
 echo "alias cd=c" >> ~/$rcfile
 source ~/$rcfile
 ```
