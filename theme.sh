@@ -21,10 +21,10 @@ export B_SMALL=◦
 export C_RESET=$(color 0 0)
 export C_HEADER=$(color 1 0 2)
 # copied from linux kernal log levels
-export C_DEBUG=$(color 1 4 0)
+export C_DEBUG=$(color 1 5 0)
 export C_INFOS=$(color 1 2 0)
-export C_NOTICE=$(color 1 0 7)
-export C_WARN=$(color 1 6 0)
+export C_NOTICE=$(color 1 7 0)
+export C_WARN=$(color 1 3 0)
 export C_ERR=$(color 1 1 0)
 export C_CRIT=$(color 1 0 6)
 export C_ALERT=$(color 1 0 5)

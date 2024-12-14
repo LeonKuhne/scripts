@@ -7,8 +7,10 @@
 #            
 
 # randomize color prompt
+PS1_ORIGINAL=$PS1
 function rand_prompt() {
-  PROMPT="%F{$((1+RANDOM%255))}>%f "
+  #PROMPT="%F{$((1+RANDOM%255))}>%f "
+  PS1="\[\e[38;5;$((RANDOM%256+1))m\]$PS1_ORIGINAL\[\e[0m\] "
 }
 
 # randomize background color

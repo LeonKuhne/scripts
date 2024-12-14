@@ -15,10 +15,15 @@ function c() {
     cd $@
     pwd
     pwd > $LWD_DIR # store last working directory
-    #rand_prompt # indicate change with color
-    if [ -f "$(pwd)/$C_DIR" ]; then # execute directory script
-      source "./$C_DIR"
-    fi
+    rand_prompt # indicate change with color
+    c_run
+  fi
+}
+
+function c_run() {
+  # execute directory script if exists
+  if [ -f "$(pwd)/$C_DIR" ]; then 
+    source "./$C_DIR"
   fi
 }
 
