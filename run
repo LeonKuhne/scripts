@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for f in ~/.config/scripts/*.sh; do
+	echo "sourcing $f"
+	source "$f"
+done

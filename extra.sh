@@ -45,10 +45,15 @@ function theme() {
   echo "press '⌃+⌘+,' to reload theme"
 }
 
-# git project
-function get() {
-  git clone git@github.com:leonkuhne/$1.git
-  c $1
+function geet() {
+  git clone "git@github.com:LeonKuhne/$1.git"
+  c "$1"
+}
+
+function goot() {
+  git add .
+  git commit -m "get oot"
+  git push
 }
 
 function browse() {
