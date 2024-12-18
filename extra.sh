@@ -48,6 +48,7 @@ function theme() {
 }
 
 function geet() {
+  if [ -z "$1" ]; then git pull; return; fi
   git clone "git@github.com:LeonKuhne/$1.git"
   c "$1"
 }
