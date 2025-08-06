@@ -31,8 +31,3 @@ function c_run() {
 function back() {
   c $(cat $LWD_DIR)
 }
-
-# clear change
-alias cc="clear && c"
-# clear list
-alias cl="clear && ls"
