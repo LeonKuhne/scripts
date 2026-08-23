@@ -9,15 +9,11 @@ if [ -z $C_DIR ]; then C_DIR=.cd; fi
 
 # change [directory]
 function c() {
-  if [ -z "$@" ]; then
-    ls --color .
-  else 
-    cd $@
-    pwd
-    pwd > $LWD_DIR # store last working directory
-    rand_prompt # indicate change with color
-    c_run
-  fi
+  cd $@
+  pwd
+  pwd > $LWD_DIR # store last working directory
+  rand_prompt # indicate change with color
+  c_run
 }
 
 function c_run() {
