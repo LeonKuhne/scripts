@@ -29,6 +29,7 @@ export C_ERR=$(color 1 1 0)
 export C_CRIT=$(color 1 0 6)
 export C_ALERT=$(color 1 0 5)
 export C_EMERG=$(color 1 7 1)
+export C_ALT=$(color 0 4 0)
 
 # handy helper
 function c_log() { 
@@ -46,6 +47,7 @@ function err() { c_log "$C_ERR" $@; }
 function crit() { c_log "$C_CRIT" $@; }
 function alert() { c_log "$C_ALERT" $@; }
 function emerg() { c_log "$C_EMERG" $@; }
+function alt() { c_log "$C_ALT" $@; }
 
 # list all available color constants
 function COLORS() {

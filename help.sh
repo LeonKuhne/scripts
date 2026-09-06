@@ -7,7 +7,7 @@ function help() {
   fi
   
   cat "$@" |
-    grep "^function" |
+    grep -E "^function.*\(\)" |
     sed s/function\ //g |
     sed s/\(\)\ \{//g |
     xargs python3 -c '
